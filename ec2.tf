@@ -38,7 +38,6 @@ module "ansible" {
   subnet_id                   = element(module.vpc.private_subnets, 0)
   associate_public_ip_address = false
 
-
   tags = {
     app         = var.app
     Terraform   = "true"
