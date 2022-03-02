@@ -45,12 +45,3 @@ module "ansible" {
     Environment = var.env_name
   }
 }
-resource "aws_network_interface" "ansible-private" {
-  subnet_id       = element(module.vpc.private_subnets, 0)
-  security_groups = ["${module.ansible_security_group.security_group_id}"]
-
-  attachment {
-    instance     = module.ansible.id
-    device_index = 1
-  }
-}
