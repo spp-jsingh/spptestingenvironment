@@ -4,6 +4,10 @@ terraform {
       source  = "hashicorp/aws"
       version = "~> 3.27"
     }
+    twingate = {
+      source  = "Twingate/twingate"
+      version = "0.1.6"
+    }
   }
 
   required_version = ">= 1.1.0"

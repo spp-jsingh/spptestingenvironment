@@ -70,3 +70,12 @@ module "ansible_security_group" {
     Environment = var.env_name
   }
 }
+
+module "demo_sg" {
+  source             = "terraform-aws-modules/security-group/aws"
+  version            = "3.17.0"
+  vpc_id             = module.demo_vpc.vpc_id
+  name               = "demo_security_group"
+  egress_cidr_blocks = ["0.0.0.0/0"]
+  egress_rules       = ["all-tcp", "all-udp", "all-icmp"]
+}

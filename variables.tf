@@ -68,5 +68,9 @@ variable "ec2type" {
 
 variable "deploy-public-key" {
   description = "default deployment ssh public key for ec2 instance"
-  default     = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDa1CYSWjAFaVQXbcXFcg+/XslXoS6pjyjeAix70XWPatWrydW97YMkiCz/tfEE6aLiJ3om9vhs93X+WxmGrDI7YvyKugrgBpzxPGnfg4/Zbl5vvzx3fe1xZjkuGtm+7TUwBGB7k80WI7Fz291uRxCrlphY+U7kz/VlWL0F98X/O0MfDPXOnp0vc87k/l0fmHa5gfH++ciNdzQX7O0tUWbeoAnbbGoJ//V5s7HgvP2st37B4XSlcsNw8jlfYwDbytIyBAe6LuAuI1XqOFFvN6O4Pm+cu6GrBhknLSofFXDii25lGn/qhk79uIxEZIquBtqiKqbwwGgTc27VBlrciuQFkoFF5H1Exsb3EWKCfDAGeT0RPOZaydnJI7wSU/tRDAURXJa9/nDTPPHked53JO4HxaWmVT8rotm6Yh5b5AWf+knkp585nAXCJ1UNL4ws4z+4zKC/1OG+3g9aUTT6nrpkngPbCeJyskqS0KQcmC68rjozlAKm9VIgRF5Hn5u+hRU= jsingh@Justins-MacBook-Pro.local"
+  default     = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPYfrasy/6vbTsleadFk9dwNyn3dCItnNjdA2sYaDA2B spp-deploy"
+}
+
+variable "network" {
+  default = "autoco"
 }
