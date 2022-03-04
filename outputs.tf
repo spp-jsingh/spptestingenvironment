@@ -1,19 +1,19 @@
-output "security-group" {
+output "jump-security-group" {
   value = module.jumpbox_security_group
 }
 
-output "vpc-splunk" {
-  value = module.vpc
+output "ansible-security-group" {
+  value = module.ansible_security_group
 }
 
-output "ec2-instance" {
-  value = module.jumpbox
+output "jumpbox_public_ip" {
+  value = module.jumpbox.public_ip
 }
 
-output "private_ip" {
-  value = module.ansible
+output "ansible_private_ip" {
+  value = module.ansible.private_ip
 }
 
-output "public_ip" {
-  value = module.jumpbox
+output "nat_public_ips" {
+  value = module.vpc.nat_public_ips
 }

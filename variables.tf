@@ -36,6 +36,7 @@ variable "ami" {
   description = "instance AMI ubuntu 20.04"
   default     = "ami-01b996646377b6619"
 }
+
 variable "spp-manage_cidr_block" {
   description = "spp-management network CIDR"
   default     = "0.0.0.0/0"
@@ -71,6 +72,15 @@ variable "deploy-public-key" {
   default     = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPYfrasy/6vbTsleadFk9dwNyn3dCItnNjdA2sYaDA2B spp-deploy"
 }
 
-variable "network" {
-  default = "autoco"
+variable "twingate-network" {
+  default = "cst1000-manage"
 }
+
+variable "twingate-connector-name" {
+  default = "cst1000-manage"
+}
+
+variable "twingate-client-id" {
+  default = "spp"
+}
+
